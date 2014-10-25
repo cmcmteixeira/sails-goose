@@ -1,6 +1,6 @@
 {
   "name": "sails-goose",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Mongoose Integration for sailsjs",
   "main": "index.js",
   "scripts": {

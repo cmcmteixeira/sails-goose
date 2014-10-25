@@ -19,7 +19,7 @@ https://github.com/carlosmtx/sails-goose
 		},
 	}
 
-#3 Create the folder "goose-models" in the api folder
+#3 Create the folder "goose-schemas" in the api folder
 #4 Add all your schemas in the goose-schema folder using the following structure :
 	
 	//File User.js

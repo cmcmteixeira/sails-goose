@@ -3,7 +3,7 @@
 	var mongoose= require('mongoose');
 	var goose 	= null; 
 
-	var schemaFolder = root + '/api/goose-schema/';
+	var schemaFolder = root + '/api/goose-schemas/';
 	var configFile   = root + '/config/goose.js'; 
 
 	//------------------------------
