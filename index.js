@@ -3,7 +3,7 @@
 	var mongoose= require('mongoose');
 	var goose 	= null; 
 
-	var schemaFolder = root + '/api/goose-models/';
+	var schemaFolder = root + '/api/goose-schema/';
 	var configFile   = root + '/config/goose.js'; 
 
 	//------------------------------
@@ -14,7 +14,7 @@
 	for ( i in schemaFile ){
 		schemas.push( { 
 			name 	: schemaFile[i].replace(/\.js$/i,'') , 
-			schema 	: require( schemaFolder + schemaFile[i] )  } )
+			schema 	: require( schemaFolder + schemaFile[i] ).model  } )
 	}
 
 	//------------------------------
