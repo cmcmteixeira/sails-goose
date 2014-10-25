@@ -7,14 +7,14 @@
 	var configFile   = root + '/config/goose.js'; 
 
 	//------------------------------
-	var schemaFile = fs.readdirSync( process.cwd() +'/api/goose-models' )
-
+	var schemaFile = fs.readdirSync( schemaFolder )
 	//------------------------------
 	var schemas = [];
 	for ( i in schemaFile ){
 		schemas.push( { 
 			name 	: schemaFile[i].replace(/\.js$/i,'') , 
-			schema 	: require( schemaFolder + schemaFile[i] ).model  } )
+			schema 	: require( schemaFolder + schemaFile[i] ) 
+		} );
 	}
 
 	//------------------------------
