@@ -40,7 +40,7 @@ module.exports = function( db ){
 
 	// Setting models as globals
 	//------------------------------
-	if ( config.globals ){
+	if ( config[db].globals ){
 		for ( i in schemas ){
 			global[schemas[i].name] = goose[schemas[i].name]
 		}
