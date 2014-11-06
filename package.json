@@ -1,6 +1,6 @@
 {
   "name": "sails-goose",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "Mongoose Integration for sailsjs",
   "main": "index.js",
   "scripts": {
@@ -13,6 +13,11 @@
     "sailsjs",
     "js"
   ],
+  "repository" :
+  { 
+    "type" : "git",
+    "url" : "https://github.com/carlosmtx/sails-goose"
+  },
   "author": "Carlos Teixeira",
   "license": "ISC"
 }

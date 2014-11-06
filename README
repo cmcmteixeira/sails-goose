@@ -1,43 +1,69 @@
 https://github.com/carlosmtx/sails-goose
 
-#1 npm install sails-goose
-#2 Create a file named "goose.js" in the config folder with this content :
+1. npm install sails-goose
 
-	module.exports.goose = {
+2. Create a file named "goose.js" in the config folder with this content :
 
-		globals : true ,
-		host 	: "localhost",
-		port 	: 27017,
-		db 		: "test",
-		options 	: {
-	//		db 			: "",
-	//		server 		: "",
-	//		replset 	: "",
-	//		user 		: "",
-	//		pass 		: "",
-	//		auth 		: "",
-		},
+		module.exports.goose = {
+
+		myDb : {
+			globals : true ,
+
+			host 	: "localhost",
+
+			port 	: 27017,
+
+			db 		: "test",
+
+			options 	: {
+
+				// db 		: "",
+
+				// server 	: "",
+
+				// replset 	: "",
+
+				// user 	: "",
+
+				// pass 	: "",
+
+				// auth 	: "",
+
+			}
+		}
+
 	}
 
-#3 Create the folder "goose-schemas" in the api folder
-#4 Add all your schemas in the goose-schema folder using the following structure :
+3. Create the folder "goose-schemas" in the api folder
+
+
+4. Add all your schemas in the goose-schema folder using the following structure :
 	
 	//File User.js
+	
 	module.exports = {
+
 		name : String,
+	
 		email : String,
+	
 		birthday : Date,
+	
 		about : String,
-		facebookid : String,
+
+		interest : require("Interest.js"),
+	
 	};
 
-#5 Add " require('sails-goose'); " to "app.js"
+5. Add " require('sails-goose')("myDb"); " to "app.js"
 
-#6 If you have set globals to true you can use mongoose models like this:
+6. If you have set globals to true you can use mongoose models like this:
+	
 	User.find({name : 'teste' });
    
    Alternatively you can use :
+   	
    	goose.User 
 
-#7 For a list of all 'options' check : http://mongoosejs.com/docs/connections.html#options 
+7. For a list of all the schema 'options' check : http://mongoosejs.com/docs/connections.html#options 
 
